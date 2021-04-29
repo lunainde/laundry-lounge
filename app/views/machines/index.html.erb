@@ -3,3 +3,5 @@
 <% @machines.each do |machine| %>
   <li><%= link_to "#{machine.business_name}", machine_path(machine) %></li>
 <% end %>
+
+<%= link_to "New Machine", new_machine_path %>
