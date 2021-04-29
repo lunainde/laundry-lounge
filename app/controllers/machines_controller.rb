@@ -8,6 +8,19 @@ class MachinesController < ApplicationController
     @machine = Machine.find(params[:id])
   end
 
+  def new
+    @machine = Machine.new
+  end
+
+  def create
+    @machine = Machine.new(machine_params)
+    @machine.user = current_user
+    if @machine.save
+      redirect_to machine_path(@machine)
+    else
+      render :new
+    end
+  end
 
   def edit
     @machine = Machine.find(params[:id])
@@ -24,11 +37,11 @@ class MachinesController < ApplicationController
     @machine.destroy
     redirect_to machines_path
   end
-  
+
   private
 
   def machine_params
-    params.require(:machine).permit(:location, :business_type, :business_name, :machine_type, :price, :availability)
+    params.require(:machine).permit(:location, :business_type, :business_name, :machine_type, :price, :availability, :user_id)
   end
 
 end
