@@ -1,5 +1,5 @@
 <h1>washing machines</h1>
 
 <% @machines.each do |machine| %>
-  <li><%= machine.business_name %></li>
+  <li><%= link_to "#{machine.business_name}", machine_path(machine) %></li>
 <% end %>
