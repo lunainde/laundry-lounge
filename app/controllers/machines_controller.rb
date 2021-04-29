@@ -8,6 +8,7 @@ class MachinesController < ApplicationController
     @machine = Machine.find(params[:id])
   end
 
+
   def edit
     @machine = Machine.find(params[:id])
   end
@@ -18,6 +19,12 @@ class MachinesController < ApplicationController
     redirect_to machine_path(@machine)
   end
 
+  def destroy
+    @machine = Machine.find(params[:id])
+    @machine.destroy
+    redirect_to machines_path
+  end
+  
   private
 
   def machine_params
