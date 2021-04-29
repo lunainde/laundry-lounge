@@ -1,11 +1,13 @@
-
-<h3>Add a new machine</h3>
-
-<%= simple_form_for @machine do |f| %>
-  <%= f.input :business_name, placeholder: 'How is the name of your business?' %>
-  <%= f.input :business_type, placeholder: 'Cafe' %>
-  <%= f.input :location, placeholder: 'Type the address' %>
-  <%= f.input :machine_type, placeholder: 'washing' %>
-  <%= f.input :price, placeholder: 'amount in EUR' %>
-  <%= f.submit class: 'btn btn-flat' %>
-<% end %>
+<div class="container mt-5">
+  <h4>✦ Add a new machine ✦</h4>
+  <br>
+  <%= simple_form_for @machine do |f| %>
+    <%= f.input :business_name, placeholder: 'How is the name of your business?' %>
+    <%= f.input :business_type, placeholder: 'Cafe' %>
+    <%= f.input :location, placeholder: 'Type the address' %>
+    <%= f.input :machine_type, placeholder: 'washing' %>
+    <%= f.input :price, placeholder: 'amount in EUR' %>
+    <%= f.input :availability %>
+    <%= f.button :submit, class: 'btn btn-success' %>
+  <% end %>
+</div>
