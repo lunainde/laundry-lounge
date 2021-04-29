@@ -1,0 +1,13 @@
+<div class="container mt-5">
+  <h4>✦ Edit ✦</h4>
+  <br>
+  <%= simple_form_for @machine do |f| %>
+    <%= f.input :business_name %>
+    <%= f.input :business_type %>
+    <%= f.input :location %>
+    <%= f.input :machine_type %>
+    <%= f.input :price %>
+    <%= f.input :availability %>
+    <%= f.button :submit, class: 'btn btn-success' %>
+  <% end %>
+</div>
