@@ -7,4 +7,10 @@ class MachinesController < ApplicationController
   def show
     @machine = Machine.find(params[:id])
   end
+
+  def destroy
+    @machine = Machine.find(params[:id])
+    @machine.destroy
+    redirect_to machines_path
+  end
 end

@@ -1,1 +1,6 @@
 <h1><%= @machine.business_name %></h1>
+
+<%= link_to "Delete #{@machine.business_name}",
+            machine_path(@machine),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
