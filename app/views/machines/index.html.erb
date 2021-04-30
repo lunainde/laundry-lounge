@@ -1,7 +1,27 @@
-<h1>washing machines</h1>
 
-<% @machines.each do |machine| %>
-  <li><%= link_to "#{machine.business_name}", machine_path(machine) %></li>
-<% end %>
 
-<%= link_to "New Machine", new_machine_path %>
+<div class="container">
+  <p> explore... </p>
+  <%= link_to "add", new_machine_path %>
+  <div class="row">
+
+  <div class="col-6 mt-3">
+    <% @machines.each do | machine | %>
+      <div class="card-product mt-5">
+        <img src="https://images.unsplash.com/photo-1593326041306-9df08699defb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1266&q=80" />
+        <div class="card-product-infos">
+          <%= link_to machine.business_name, machine_path(machine) %>
+          <p>Product description with <strong>relevant info</strong> only.</p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="col-6">
+    <img id="map" src='https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.3381,48.8693,10.45,0,0/600x1000?access_token=pk.eyJ1IjoibHVuYWluZGUiLCJhIjoiY2ttYzAxZGVmMjc4OTJ2bndtMTdyYjZ3MCJ9.aiyqCxXRBzA7_tvaFnsq1Q'>
+  </div>
+
+  </div>
+</div>
+
+
