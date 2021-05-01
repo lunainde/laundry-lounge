@@ -2,7 +2,9 @@
   <div class="container mt-5">
     <h1> edit </h1>
     <br>
-    <%= simple_form_for @machine do |f| %>
+
+    <div id="form-edit">
+      <%= simple_form_for @machine do |f| %>
       <%= f.input :business_name %>
       <%= f.input :business_type %>
       <%= f.input :location %>
@@ -10,6 +12,8 @@
       <%= f.input :price %>
       <%= f.input :availability %>
       <%= f.button :submit, class: 'btn btn-flat' %>
-    <% end %>
+      <% end %>
+    </div>
+
   </div>
 </div>
