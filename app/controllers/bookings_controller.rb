@@ -1,7 +1,6 @@
 class BookingsController < ApplicationController
 before_action :find_machine, only: [:create]
 
-
   def index
     @bookings = Booking.where(user_id: current_user)
   end
@@ -12,9 +11,10 @@ before_action :find_machine, only: [:create]
 
   def create
     @booking = Booking.new(booking_params)
+     @machine = Machine.find(params[:machine_id])
     @booking.user = current_user
     @booking.machine = @machine
-    if @booking.save!
+    if @booking.save
       redirect_to booking_path(@booking)
     else
       render :show

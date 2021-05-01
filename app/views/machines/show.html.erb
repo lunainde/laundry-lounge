@@ -20,9 +20,8 @@
 
     <div class="col-6 mt-3">
         <div class="booking mt-3">
-          <div class="card-product-infos">
-            <p>Booking</p>
-             <h1> book now </h1>
+          <div class="card-product-info">
+             <h1 style="color: #000000"> book now </h1>
               <br>
               <%= simple_form_for [@machine, @booking] do |f| %>
                 <%= f.input :date, placeholder: 'dd/mm/yy' %>
