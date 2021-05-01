@@ -11,5 +11,3 @@ Machine.create(user_id: 2, machine_type: "washer", business_type: "Cafe", locati
 Machine.create(user_id: 2, machine_type: "washer", business_type: "Cafe", location: "Bergstraße 68, 10115 Berlin", business_name: "Distrikt coffee", price: 6.9)
 Machine.create(user_id: 2, machine_type: "washer", business_type: "Cafe", location: "Schwarzwaldstraße 44, 60528 Frankfurt am Main", business_name: "Milch Halle Cafe", price: 6.9)
 Machine.create(user_id: 2, machine_type: "washer", business_type: "Cafe", location: "Leipziger Str. 108, 60487 Frankfurt am Main", business_name: "Fridas Cafe", price: 6.9)
-
-
