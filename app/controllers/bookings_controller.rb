@@ -1,6 +1,5 @@
 class BookingsController < ApplicationController
-before_action :find_machine, only: [:show]
-
+before_action :find_machine, only: [:create]
 
   def index
     @bookings = Booking.where(user_id: current_user)
@@ -16,7 +15,7 @@ before_action :find_machine, only: [:show]
     @booking.user = current_user
     @booking.machine = @machine
     if @booking.save
-      redirect_to machine_bookings_path
+      redirect_to booking_path(@booking)
     else
       render :show
     end
