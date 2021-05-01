@@ -6,3 +6,16 @@
             data: { confirm: "Are you sure?" } %>
 
 <%= link_to "Edit",  edit_machine_path %>
+
+
+  <div class="container mt-5">
+    <h1> book now </h1>
+    <br>
+    <%= simple_form_for [@machine, @booking] do |f| %>
+      <%= f.input :date, placeholder: 'dd/mm/yy' %>
+      <%= f.input :time, placeholder: '00:00' %>
+      <%= f.button :submit, class: 'btn btn-flat' %>
+    <% end %>
+  </div>
+
+

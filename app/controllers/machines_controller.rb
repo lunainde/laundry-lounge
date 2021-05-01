@@ -1,11 +1,18 @@
 class MachinesController < ApplicationController
 
   def index
-    @machines = Machine.all
+    if params[:query].present?
+      @machines = Machine.where(business_type: params[:query])
+    else
+      @machines = Machine.all
+    end
   end
+
 
   def show
     @machine = Machine.find(params[:id])
+    @booking = Booking.new
+    @bookings = @machine.bookings
   end
 
   def new
