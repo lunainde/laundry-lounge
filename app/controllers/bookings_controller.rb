@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-before_action :find_machine, only: [:show, :create]
+before_action :find_machine, only: [:create]
 
 
   def index
@@ -14,8 +14,8 @@ before_action :find_machine, only: [:show, :create]
     @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.machine = @machine
-    if @booking.save
-      redirect_to machine_booking_path(@booking)
+    if @booking.save!
+      redirect_to booking_path(@booking)
     else
       render :show
     end

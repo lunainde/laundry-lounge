@@ -12,4 +12,6 @@ Machine.create(user_id: 2, machine_type: "washer", business_type: "Cafe", locati
 Machine.create(user_id: 2, machine_type: "washer", business_type: "Cafe", location: "Schwarzwaldstraße 44, 60528 Frankfurt am Main", business_name: "Milch Halle Cafe", price: 6.9)
 Machine.create(user_id: 2, machine_type: "washer", business_type: "Cafe", location: "Leipziger Str. 108, 60487 Frankfurt am Main", business_name: "Fridas Cafe", price: 6.9)
 
-
+User.create( email:"serenity@gmail.com", password: "123456")
+User.create( email:"manja1@gmail.com", password: "123456")
+User.create( email:"manja2@gmail.com", password: "123456")
