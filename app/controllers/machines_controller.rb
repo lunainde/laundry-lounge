@@ -5,6 +5,14 @@ class MachinesController < ApplicationController
       @machines = Machine.where(business_type: params[:query])
     else
       @machines = Machine.all
+      @markers = @machines.geocoded.map do |machine|
+      {
+        lat: machine.latitude,
+        lng: machine.longitude,
+        infoWindow: render_to_string(partial: "info_window", locals: { machine: machine }),
+        image_url: helpers.asset_url('map-solid.png')
+      }
+      end
     end
   end
 

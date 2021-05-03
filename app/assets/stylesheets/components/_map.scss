@@ -1,5 +1,5 @@
 /* MAP POSITIONING */
-.map-container {
+.row {
   display: flex;
 }
 
@@ -11,4 +11,13 @@
 
 .cards {
   flex-grow: 1;
+}
+
+.mapboxgl-popup {
+  max-width: 200px;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
