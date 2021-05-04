@@ -1,0 +1,11 @@
+<div>
+  <%= simple_form_for @machine do |f| %>
+    <%= f.input :business_name, placeholder: 'business name' %>
+    <%= f.input :business_type, :collection => ["Cafe","Bar", "Gym", "Shopping Mall", "Coworking Space", "University & Libraries", "Other"], prompt: "Cafe, Gym, etc." %>
+    <%= f.input :location, placeholder: 'address' %>
+    <%= f.input :machine_type, :collection => ["Washer", "Dryer", "Washer & Dryer"], prompt: 'Washer, Dryer, etc' %>
+    <%= f.input :price, placeholder: 'amount in EUR' %>
+    <%= f.input :availability %>
+    <%= f.button :submit, class: 'btn btn-flat' %>
+  <% end %>
+</div>
