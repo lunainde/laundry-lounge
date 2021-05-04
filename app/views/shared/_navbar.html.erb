@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to image_tag('logo.png', width: 60) + "laundry-lounge", root_path, class: "navbar-logo" %>
+  <%= link_to image_tag('logo.png', width: 60) + " laundry-lounge", root_path, class: "navbar-logo" %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -24,6 +24,15 @@
           </div>
         </li>
       <% else %>
+        <li class="nav-item active mr-15">
+          <%= link_to "events", new_user_session_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item mr-15">
+          <%= link_to "laundry-blog", new_user_session_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item mr-15">
+          <%= link_to "become a host", new_user_session_path, class: "nav-link" %>
+        </li>
         <li class="nav-item">
           <%= link_to image_tag('user-regular.png', width: 30), new_user_session_path, class: "nav-link" %>
         </li>
