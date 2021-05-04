@@ -11,7 +11,7 @@ before_action :find_machine, only: [:create]
 
   def create
     @booking = Booking.new(booking_params)
-     @machine = Machine.find(params[:machine_id])
+    @machine = Machine.find(params[:machine_id])
     @booking.user = current_user
     @booking.machine = @machine
     if @booking.save

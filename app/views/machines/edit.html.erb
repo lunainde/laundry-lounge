@@ -1,19 +1,7 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1551761429-8232f9f5955c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2709&q=80);">
   <div class="container mt-5">
-    <h1> edit </h1>
+    <h1> Edit your machine</h1>
     <br>
-
-    <div id="form-edit">
-      <%= simple_form_for @machine do |f| %>
-      <%= f.input :business_name %>
-      <%= f.input :business_type %>
-      <%= f.input :location %>
-      <%= f.input :machine_type %>
-      <%= f.input :price %>
-      <%= f.input :availability %>
-      <%= f.button :submit, class: 'btn btn-flat' %>
-      <% end %>
-    </div>
-
+    <%= render 'shared/machine_form' %>
   </div>
 </div>

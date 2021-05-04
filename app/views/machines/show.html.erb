@@ -26,6 +26,7 @@
               <%= simple_form_for [@machine, @booking] do |f| %>
                 <%= f.input :date, placeholder: 'dd/mm/yy' %>
                 <%= f.input :time, placeholder: '00:00' %>
+                <%= "#{@machine.price} Euro" %>
                 <%= f.button :submit, class: 'btn btn-flat' %>
               <% end %>
           </div>

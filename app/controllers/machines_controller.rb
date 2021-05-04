@@ -10,7 +10,7 @@ class MachinesController < ApplicationController
         lat: machine.latitude,
         lng: machine.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { machine: machine }),
-        image_url: helpers.asset_url('map-solid.png')
+        image_url: helpers.asset_url('/app/assets/images/map-solid.png')
       }
       end
     end
