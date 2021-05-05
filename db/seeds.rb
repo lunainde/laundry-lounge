@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 Machine.create(user_id: 1, machine_type: "Washer", business_type: "Cafe", location: "Märkisches Ufer 22, 10179 Berlin", business_name: "Café Re", price: 5.9)
 Machine.create(user_id: 2, machine_type: "Washer", business_type: "Cafe", location: "Fasanenstraße 23, 10719 Berlin", business_name: "Literaturcafé", price: 6.9)
 Machine.create(user_id: 2, machine_type: "Dryer", business_type: "Cafe", location: "Mommsenstraße 4, 10629 Berlin", business_name: "Espressobar", price: 6.9)
@@ -27,7 +28,7 @@ Machine.create(user_id: 2, machine_type: "Washer", business_type: "Universities"
 Machine.create(user_id: 2, machine_type: "Washer", business_type: "Universities", location: "Hardenbergstraße 36, 10623 Berlin", business_name: "Technische Universität Berlin", price: 6.9)
 Machine.create(user_id: 2, machine_type: "Washer & Dryer", business_type: "Universities", location: "Matthäikirchplatz 6, 10785 Berlin", business_name: "Kunstbibliothek Berlin", price: 6.9)
 
-
-# 15.times do
-#   Maschine.create(user_)
-# end
+# VALIDATIONS
+# validates :business_name, :business_type, :location, :machine_type, :price, presence: true
+# validates :business_type, inclusion: { in: ["Cafe", "Bar", "Gym", "Shopping Mall", "Coworking Space", "University & Library", "Other"]}
+# validates :machine_type, inclusion: { in: ["Washer", "Dryer", "Washer & Dryer"]}

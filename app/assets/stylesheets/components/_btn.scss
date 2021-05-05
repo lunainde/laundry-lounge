@@ -41,4 +41,17 @@
     background: linear-gradient(#147EFF, #0F67DA);
     color: white;
   }
-  
+
+  .btn-link {
+    color: $blue;
+    padding: 4px;
+    margin-right: 16px;
+    transition: background 0.3s ease;
+  }
+
+  .btn-link:hover {
+    opacity: 0.5;
+    color: grey;
+    text-decoration: none;
+  }
+

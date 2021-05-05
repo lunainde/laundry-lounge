@@ -2,46 +2,57 @@
 
   <div class="container">
     <div id="search-bar">
-      <%= form_tag machines_path, method: :get do %>
+        <%= form_tag machines_path, method: :get do %>
         <%= text_field_tag :query, params[:query], class:"search-input", placeholder: "What do you fancy my love?" %>
         <%= submit_tag "Search", class: "btn btn-primary" %>
       <% end %>
     </div>
+    <div class="row">
+      <div class="col-6 mt-3">
+        <div class="container mt-4">
+          <h1>laundry-lounge, <strong>loads of fun</strong>!</h1>
+          <p>Enjoy life while laundrying with our <strong>eco</strong> detergent included!</p>
+        </div>
+      </div>
+      <div class="col-6 mt-1">
+        <%= link_to image_tag('process.png', width: 500), "#", class: "navbar-logo" %>
+      </div>
+    </div>
   </div>
-
-  <div class="container">
-    <h1>laundry-lounge, <strong>loads of fun</strong>!</h1>
-    <p>enjoy your life while laundrying with eco detergent.</p>
-  </div>
-
 </div>
+
 <div class="container mt-4">
-  <h2>wash anywhere ...</h2>
+  <h2>Wash anywhere ...</h2>
   <div class="cards">
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1551879354-08d397325b44?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2551&q=80)">
-      cafes
+      Cafes
     </div>
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1614285180156-5f225c9f621b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1268&q=80)">
-      bars
+      Bars
     </div>
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1611094607507-8c8173e5cf33?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80)">
-      gyms
+      Gyms
     </div>
       <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1618506544551-796981666b21?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80)">
-      bookstores
+      Universities & Libraries
     </div>
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80)">
-      universities
+      Coworking Spaces
     </div>
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/flagged/photo-1567966220855-01c265f049b4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2606&q=80)">
-      shops
+      Shopping Malls
     </div>
   </div>
 </div>
 
-
+<div class="container mt-4">
+  <div class="card-category px-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1606207426669-d7b4fd9c942e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80)">
+    <h3>Curious about fashion trends, textile care, and upcomming loundry-lounges?</h3>
+    <p><strong>Join our Community!</strong></p>
+  </div>
+</div>
 
