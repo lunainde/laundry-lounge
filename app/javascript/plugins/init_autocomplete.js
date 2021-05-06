@@ -5,6 +5,10 @@ const initAutocomplete = () => {
   if (addressInput) {
     places({ container: addressInput });
   }
+  const addressSearch = document.getElementById('search_location');
+  if (addressSearch) {
+    places({ container: addressSearch });
+  }
 };
 
 export { initAutocomplete };

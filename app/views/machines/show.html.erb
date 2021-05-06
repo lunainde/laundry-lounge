@@ -39,7 +39,7 @@
              <p style="color: #FF7E79 "> Book your loads! </p>
               <br>
               <%= simple_form_for [@machine, @booking] do |f| %>
-                <%= f.input :date, placeholder: 'dd/mm/yy' %>
+                <%= f.input :date,as: :date, html5: true, placeholder: 'dd/mm/yy', order: [:day, :month, :year] %>
                 <%= f.input :time, placeholder: '00:00' %>
 
 
