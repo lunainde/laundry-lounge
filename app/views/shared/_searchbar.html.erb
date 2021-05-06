@@ -1,0 +1,13 @@
+<div class="search-bar">
+  <div class="row">
+    <%= simple_form_for :search, method: :get, url: machines_path, wrapper: :inline_form,
+      html: { class: "form-inline" }  do |f| %>
+      <%= f.input :location, placeholder: 'Location' %>
+      <%= f.input :date, as: :date, html5: true, placeholder: 'date' %>
+      <%= f.input :time, placeholder: 'time' %>
+      <%= f.input :business_type, placeholder: 'business_type' %>
+      <%= f.submit "Search", class: "btn btn-primary" %>
+    <% end %>
+
+  </div>
+</div>
