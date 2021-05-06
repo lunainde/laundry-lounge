@@ -2,7 +2,7 @@ class Machine < ApplicationRecord
   belongs_to :user
   has_many_attached :photos
   has_many :bookings, dependent: :destroy
-  validates :business_name, :business_type, :location, :machine_type, :price, presence: true
+  validates :business_name, :business_type, :location, :machine_type, :description, :price, presence: true
   validates :business_name, length: { minimum: 3 }
   validates :business_type, inclusion: { in: ["Cafe", "Bar", "Gym", "Shopping Mall", "Coworking Space", "University & Library", "Other"]}
   validates :machine_type, inclusion: { in: ["Washer", "Dryer", "Washer & Dryer"]}
