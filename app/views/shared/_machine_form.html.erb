@@ -1,4 +1,4 @@
-<div class="container">
+<div>
   <%= simple_form_for @machine do |f| %>
     <%= f.input :business_name, placeholder: 'Business name' %>
     <%= f.input :business_type, :collection => ["Cafe","Bar", "Gym", "Shopping Mall", "Coworking Space", "University & Library", "Other"], prompt: "Cafe, Gym, etc." %>
@@ -7,7 +7,6 @@
     <%= f.input :description, placeholder: 'Description' %>
     <%= f.input :price, placeholder: 'Amount in EUR' %>
     <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-    <%= f.input :availability %>
     <%= f.button :submit, class: 'btn btn-flat' %>
   <% end %>
 </div>
