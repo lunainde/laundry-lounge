@@ -56,7 +56,7 @@
         <div class="booking mt-3">
           <div class="card-product-info">
 
-             <p style="color: #FF7E79 "> Book your loads! </p>
+             <h2 style="color: #000000"> Book your loads! </h2>
               <br>
               <%= simple_form_for [@machine, @booking] do |f| %>
                 <%= f.input :date,as: :date, html5: true, placeholder: 'dd/mm/yy', order: [:day, :month, :year] %>
@@ -70,10 +70,13 @@
               <%= f.button :submit, 'Book', class: 'btn btn-flat' %>
               <% end %>
             </div>
+            <div style="margin-top: 5px" class="justify-content-center mt-4">
+              <p> <%= @machine.description %></p>
+            </div>
 
 
-            <div style="margin-top: 300px !important;" class="justify-content-center mt-4">
-              <p style="color: #FF7E79"> Connect with friends! </p>
+            <div style="margin-top: 300px !important;" class="row justify-content-center mt-4">
+              <p> Connect with friends! </p>
               <div class="social-links">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
