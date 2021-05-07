@@ -60,6 +60,7 @@ class MachinesController < ApplicationController
     search = params[:search]
     # @machines = Machine.where('location ILIKE ?', "%#{search[:location]}%") unless search[:location].empty?
     @machines = Machine.near("%#{search[:location]}%", 1) unless search[:location].empty?
+
     # @machines = Machine.where('date ILIKE ?', "%#{search[:date]}%") unless search[:date].empty?
     # @machines = Machine.where('time ILIKE ?', "%#{search[:time]}%") unless search[:time].empty?
     @machines = Machine.where('business_type ILIKE ?', "%#{search[:business_type]}%") unless search[:business_type].empty?

@@ -1,5 +1,5 @@
 <div class="confirmation mt-3">
-<h4> <strong>Your booking has been confirmed for the <%= @booking.date %>! </strong> </h4>
+<h2> <strong>Your booking has been confirmed for the <%= @booking.date.strftime("%d-%m-%Y") %> at <%= @machine[0].business_name %>! </strong> </h2>
 <p><%=  image_tag('confirmation.gif', width: 600) %></p>
 </div>
 
