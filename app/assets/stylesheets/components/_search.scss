@@ -18,5 +18,17 @@
   padding: 8px;
   text-align: center;
   display: inline-block;
-
+  margin: auto;
 }
+
+.search-bar-index {
+  background-color: rgba(48,113,128,1);
+  text-align: center;
+  margin: auto;
+  padding: 5px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
