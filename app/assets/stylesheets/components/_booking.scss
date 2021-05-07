@@ -39,18 +39,24 @@
     }
 }
 
+
 .booking {
     background-size: cover;
     background-position: center;
+    background-image: url("https://images.unsplash.com/photo-1573303107014-62a24108eb6b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=375&q=80");
     padding: 24px;
     color: white;
     font-size: 24px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
     border-radius: 5px;
     border-style: solid;
     border-color: rgba(48,113,128,0.2);
     justify-content: center;
+
+    p {
+      font-size: 18px;
+    }
   }
+
 
   .confirmation {
     text-align: center;
@@ -58,7 +64,7 @@
     color: $blue;
   }
   .simple_form {
-    color: $blue;
+    color: $black;
 
 }
 
