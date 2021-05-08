@@ -1,7 +1,6 @@
 class Machine < ApplicationRecord
   belongs_to :user
   has_many_attached :photos, dependent: :destroy
-
   has_many :bookings, dependent: :destroy
   validates :business_name, :business_type, :location, :machine_type, :price, presence: true
   validates :business_name, length: { minimum: 3 }
