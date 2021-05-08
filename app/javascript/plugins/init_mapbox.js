@@ -24,8 +24,8 @@ const initMapbox = () => {
     const markerDiv = mapboxMarker.getElement();
     markerDiv.id = `marker-${marker.id}`
     const machineCard = document.getElementById(`card-product-${marker.id}`);
-    machineCard.addEventListener('DOMContentLoaded', (click) => { cardClickHandler(map, mapboxMarker)}
-      );
+    console.log(machineCard, marker)
+    machineCard.addEventListener('click', cardClickHandler(map, mapboxMarker));
   }
 
   if (mapElement) { // only build a map if there's a div#map to inject into
@@ -49,7 +49,7 @@ const initMapbox = () => {
           .setPopup(popup)
           .addTo(map);
 
-    // makeCardClickable(marker, mapboxMarker, map);
+    makeCardClickable(marker, mapboxMarker, map);
 
     });
 
