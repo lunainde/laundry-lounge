@@ -12,7 +12,6 @@
 </div>
 
 
-
 <div style="margin-bottom: 100px !important;" class="container mt-4">
   <div class="row">
     <div class="col-8 mt-3">
@@ -55,25 +54,28 @@
     <div class="col-4 mt-3">
         <div class="booking mt-3">
           <div class="card-product-info">
+            <div class="booking-title">
+               <h2> Book your loads! </h2>
+            </div>
 
-             <p style="color: #FF7E79 "> Book your loads! </p>
-              <br>
+            <div class="col px-4">
               <%= simple_form_for [@machine, @booking] do |f| %>
                 <%= f.input :date,as: :date, html5: true, placeholder: 'dd/mm/yy', order: [:day, :month, :year] %>
                 <%= f.input :time, placeholder: '00:00' %>
 
-
-
-              <%= "Your total: #{@machine.price} Euro" %>
+             <p><strong><%= "Your total: #{@machine.price} Euro" %></p></strong>
             <div class="row justify-content-center mt-4">
 
               <%= f.button :submit, 'Book', class: 'btn btn-flat' %>
               <% end %>
             </div>
+            <div style="margin-top: 20px" class="justify-content-center mt-4">
+              <p> <%= @machine.description %></p>
+            </div>
 
 
-            <div style="margin-top: 300px !important;" class="justify-content-center mt-4">
-              <p style="color: #FF7E79"> Connect with friends! </p>
+            <div style="margin-top: 20px !important;" class="row justify-content-center mt-4">
+              <p> Connect with friends! </p>
               <div class="social-links">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -81,7 +83,9 @@
                 <a href="#"><i class="fab fa-telegram-plane"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
               </div>
+            </div>
           </div>
+
         </div>
       </div>
     </div>

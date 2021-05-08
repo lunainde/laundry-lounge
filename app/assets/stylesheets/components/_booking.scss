@@ -39,18 +39,20 @@
     }
 }
 
+
 .booking {
-    background-size: cover;
-    background-position: center;
-    padding: 24px;
-    color: white;
-    font-size: 24px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-    border-radius: 5px;
+    color: grey;
+    font-size: 12px;
+    border-radius: 3px;
     border-style: solid;
-    border-color: rgba(48,113,128,0.2);
+    border-color: rgba(48,113,128,0.1);
     justify-content: center;
+
+    p {
+      font-size: 16px;
+    }
   }
+
 
   .confirmation {
     text-align: center;
@@ -58,11 +60,17 @@
     color: $blue;
   }
   .simple_form {
-    color: $blue;
+    color: $black;
 
 }
 
-.booking-form {
-
+.booking-title {
+  background-color: $blue;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  color: white;
+  padding: 12px;
+  border-radius: 2px;
 }
 
