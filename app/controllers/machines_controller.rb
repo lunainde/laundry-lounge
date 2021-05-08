@@ -1,19 +1,6 @@
 class MachinesController < ApplicationController
 
   def index
-    # if params[:query].present?
-    #   @machines = Machine.where(business_type: params[:query])
-    # else
-    #   @machines = Machine.all
-    #   @markers = @machines.geocoded.map do |machine|
-    #   {
-    #     lat: machine.latitude,
-    #     lng: machine.longitude,
-    #     infoWindow: render_to_string(partial: "info_window", locals: { machine: machine }),
-    #     image_url: helpers.asset_url('map-solid.png')
-    #   }
-    #   end
-    # end
     @machines = Machine.all
     filter_machines if params[:search]
     @markers = @machines.geocoded.map do |machine|
@@ -21,7 +8,8 @@ class MachinesController < ApplicationController
         lat: machine.latitude,
         lng: machine.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { machine: machine }),
-        image_url: helpers.asset_url('map-solid.png')
+        image_url: helpers.asset_url('map-solid.png'),
+        id: machine.id
       }
     end
   end
@@ -72,10 +60,16 @@ class MachinesController < ApplicationController
   def filter_machines
     search = params[:search]
     # @machines = Machine.where('location ILIKE ?', "%#{search[:location]}%") unless search[:location].empty?
-    @machines = Machine.near("%#{search[:location]}%", 5) unless search[:location].empty?
-
+    @machines = Machine.near("%#{search[:location]}%", 1) unless search[:location].empty?
+    unless search[:date].empty?
+      @machines = Machine.joins(:bookings).where('bookings.date != ?', "#{search[:date]}")
+      @date = search[:date]
+    end
     # @machines = Machine.where('date ILIKE ?', "%#{search[:date]}%") unless search[:date].empty?
     # @machines = Machine.where('time ILIKE ?', "%#{search[:time]}%") unless search[:time].empty?
-    @machines = Machine.where('business_type ILIKE ?', "%#{search[:business_type]}%") unless search[:business_type].empty?
+    unless search[:business_type].empty?
+      @machines = Machine.where('business_type ILIKE ?', "#{search[:business_type]}")
+      @business_type = search[:business_type]
+    end
   end
 end

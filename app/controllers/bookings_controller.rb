@@ -7,6 +7,7 @@ before_action :find_machine, only: [:create]
 
   def show
     @booking = Booking.find(params[:id])
+    @machine = Machine.where(id: Booking.find(params[:id]).machine_id)
   end
 
   def create
