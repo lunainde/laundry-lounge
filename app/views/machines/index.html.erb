@@ -7,8 +7,8 @@
   <div class="container col-4 ml-4">
     <div class="col">
       <% @machines.each do | machine | %>
-        <div id="card-product-<%= machine.id %>" class="card-product my-2">
-          <img src="https://images.unsplash.com/photo-1593326041306-9df08699defb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1266&q=80" />
+        <div class="card-product my-2">
+          <%= image_tag machine.img %>
           <div class="card-product-infos">
           <%= link_to machine.business_name, machine_path(machine) %>
           <p><%= machine.location %></p>
