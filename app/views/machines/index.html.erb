@@ -7,7 +7,7 @@
   <div class="container col-4 ml-4">
     <div class="col">
       <% @machines.each do | machine | %>
-        <div class="card-product my-2">
+        <div id="card-product-<%= machine.id %>" class="card-product my-2">
           <%= image_tag machine.img %>
           <div class="card-product-infos">
           <%= link_to machine.business_name, machine_path(machine) %>
