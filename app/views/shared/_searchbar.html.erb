@@ -9,16 +9,15 @@
             params[:search][:location]
           end
           %>
-
-
-
-      <%= f.input :date, as: :date, html5: true, label: false, placeholder: 'date' %>
+      <%= f.input :date, as: :date, html5: true, label: false
+          %>
       <%= f.input :time, placeholder: 'time' %>
-      <%= f.input :business_type, :collection =>  ["Cafe","Bar", "Gym", "Shopping Mall", "Coworking Space", "University & Libraries", "Other"], prompt: "Where do you want to go?"
+      <%= f.input :business_type,
+      :collection =>  ["Cafe","Bar", "Gym", "Shopping Mall", "Coworking Space", "University & Libraries", "Other"], prompt: "Where do you want to go?"
           # if params[:search].nil? || params[:search][:business_type].nil?
           #   :collection => ["Cafe","Bar", "Gym", "Shopping Mall", "Coworking Space", "University & Libraries", "Other"]
           # else
-          #   placeholder: params[:search][:business_type]
+          #   prompt: params[:search][:business_type]
           # end
           %>
       <%= f.submit "Search", class: "btn btn-primary" %>
